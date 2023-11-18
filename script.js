@@ -13,7 +13,7 @@ async function checkWeather(city){
         document.querySelector(".weather").style.display = "none"
     }else{
         var data = await response.json();
-        
+        console.log(data);
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
